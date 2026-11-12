@@ -1,0 +1,872 @@
+/* ==========================================================================
+   RESET & PALETA DE COLORES (BLANCO, ROJO, AZUL)
+   ========================================================================== */
+:root {
+    --brand-red: #c81d25;         
+    --brand-red-hover: #a01319;
+    --brand-blue: #0b559b;        
+    --brand-blue-dark: #073867;
+    --bg-white: #ffffff;
+    --bg-light: #f4f7fa;
+    --bg-card: #ffffff;
+    --text-dark: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --whatsapp-color: #25d366;
+    --font-main: 'Montserrat', sans-serif;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   LOGO PRINCIPAL Y ÍCONOS
+   ========================================================================== */
+.logo-principal {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.icono-cremallera { height: 250px; width: auto; }
+.icono-cajas      { height: 200px; width: auto; }
+.icono-bombas     { height: 200px; width: auto; }
+.icono-cilindros  { height: 120px; width: auto; }
+.icono-cabinas    { height: 180px; width: auto; }
+.icono-elevadores { height: 180px; width: auto; }
+.icono-tren       { height: 180px; width: auto; }
+
+/* ==========================================================================
+   TAMAÑO INDIVIDUAL DE FOTOS DE TRABAJOS
+   ========================================================================== */
+.foto-cremallera-1 { width: 100%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+.foto-cremallera-2 { width: 50%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+.foto-cremallera-3 { width: 50%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+
+.foto-cajas-1 { width: 50%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+.foto-cajas-2 { width: 60%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+.foto-cajas-3 { width: 50%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+
+.foto-bombas-1 { width: 75%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+.foto-bombas-2 { width: 75%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+.foto-bombas-3 { width: 75%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+
+.foto-cilindros-1 { width: 49%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+.foto-cilindros-2 { width: 57%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+.foto-cilindros-3 { width: 75%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+
+.foto-cabinas-1 { width: 40%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+.foto-cabinas-2 { width: 85%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+.foto-cabinas-3 { width: 70%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+
+.foto-elevadores-1 { width: 100%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+.foto-elevadores-2 { width: 100%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+.foto-elevadores-3 { width: 100%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+
+.foto-tren-1 { width: 100%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+.foto-tren-2 { width: 100%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+.foto-tren-3 { width: 100%; height: 240px; object-fit: cover; border-bottom: 2px solid var(--border-color); }
+
+/* ==========================================================================
+   BOTÓN FLOTANTE WHATSAPP
+   ========================================================================== */
+.float-whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--whatsapp-color);
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+.float-whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+/* ==========================================================================
+   HEADER & NAVBAR
+   ========================================================================== */
+.header {
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid var(--brand-blue);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--brand-red);
+    font-style: italic;
+    line-height: 1.1;
+}
+
+.brand-subtitle {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--brand-blue);
+    line-height: 1.1;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar a {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--brand-blue-dark);
+    transition: var(--transition);
+}
+
+.navbar a:hover {
+    color: var(--brand-red);
+}
+
+.btn-nav {
+    background-color: var(--brand-red);
+    color: #ffffff !important;
+    padding: 8px 18px;
+    border-radius: 4px;
+}
+
+.btn-nav:hover {
+    background-color: var(--brand-red-hover);
+}
+
+/* ==========================================================================
+   HERO SECTION CON MOSAICO DE FOTOS DE FONDO
+   ========================================================================== */
+.hero {
+    position: relative;
+    padding: 130px 0 110px;
+    background-color: #071927;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.hero-stripes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--brand-red) 50%, var(--brand-blue) 50%);
+    z-index: 5;
+}
+
+.hero-mosaic-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 4px;
+    z-index: 1;
+}
+
+.hero-mosaic-item {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hero-img-auto,
+.hero-img-cremallera,
+.hero-img-bomba,
+.hero-img-cilindro,
+.hero-img-caja,
+.hero-img-maquinaria {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(40%) contrast(1.1);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(7, 25, 39, 0.88) 0%, rgba(11, 85, 155, 0.82) 100%);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 850px;
+    color: #ffffff;
+}
+
+.badge {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.15rem;
+    color: #e2e8f0;
+    margin-bottom: 30px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 26px;
+    border-radius: 5px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+}
+
+.btn-whatsapp {
+    background-color: var(--whatsapp-color);
+    color: #ffffff;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1eb956;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: var(--brand-red);
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: var(--brand-red-hover);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   BARRA SOCIAL
+   ========================================================================== */
+.social-bar {
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 0;
+}
+
+.social-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.social-item {
+    font-weight: 700;
+    color: var(--brand-blue-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-item i {
+    color: var(--brand-red);
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.social-links a {
+    width: 34px;
+    height: 34px;
+    background-color: var(--bg-light);
+    color: var(--brand-blue-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background-color: var(--brand-red);
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   SECCIÓN SERVICIOS
+   ========================================================================== */
+section {
+    padding: 75px 0;
+}
+
+.services {
+    position: relative;
+    background-color: #f8fafc;
+    background-image: 
+        linear-gradient(rgba(11, 85, 155, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 29, 37, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    overflow: hidden;
+}
+
+.bg-stripe {
+    position: absolute;
+    width: 140%;
+    height: 180px;
+    transform: rotate(-12deg);
+    opacity: 0.06;
+    pointer-events: none;
+}
+
+.stripe-red {
+    top: 10%;
+    left: -20%;
+    background: linear-gradient(90deg, var(--brand-red), transparent);
+}
+
+.stripe-blue {
+    bottom: 10%;
+    right: -20%;
+    background: linear-gradient(90deg, transparent, var(--brand-blue));
+}
+
+.bg-glow {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    filter: blur(90px);
+    pointer-events: none;
+    opacity: 0.12;
+}
+
+.glow-top-left {
+    top: -50px;
+    left: -50px;
+    background-color: var(--brand-red);
+}
+
+.glow-bottom-right {
+    bottom: -50px;
+    right: -50px;
+    background-color: var(--brand-blue);
+}
+
+.services-container {
+    position: relative;
+    z-index: 2;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: var(--brand-blue-dark);
+}
+
+.line-red {
+    width: 60px;
+    height: 4px;
+    background-color: var(--brand-red);
+    margin: 12px auto;
+    border-radius: 2px;
+}
+
+.line-blue {
+    width: 60px;
+    height: 4px;
+    background-color: var(--brand-blue);
+    margin: 12px auto;
+    border-radius: 2px;
+}
+
+.section-title p {
+    color: var(--text-muted);
+}
+
+.grid {
+    display: grid;
+    gap: 25px;
+}
+
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); }
+
+.card-link {
+    display: block;
+    color: inherit;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    border: 2px solid var(--brand-blue);
+    box-shadow: 0 4px 15px rgba(11, 85, 155, 0.08);
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(11, 85, 155, 0.18);
+    border-color: var(--brand-red);
+}
+
+.card-icon {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: var(--brand-blue-dark);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.ver-trabajos-link {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--brand-blue);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: var(--transition);
+}
+
+.card:hover .ver-trabajos-link {
+    color: var(--brand-red);
+    gap: 10px;
+}
+
+/* ==========================================================================
+   ESTILOS DE GALERÍAS Y TARJETAS DE TRABAJOS
+   ========================================================================== */
+.gallery-section {
+    display: none;
+    padding: 80px 0;
+    background-color: #f8fafc;
+    min-height: 70vh;
+}
+
+:target.gallery-section {
+    display: block;
+}
+
+.gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 20px;
+}
+
+.gallery-header h2 {
+    color: var(--brand-blue-dark);
+    font-size: 1.8rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.gallery-item {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 2px solid var(--brand-blue);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.gallery-item p {
+    padding: 15px;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   VENTA DE REPUESTOS
+   ========================================================================== */
+.parts-section {
+    background-color: #ffffff;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.parts-box {
+    background-color: var(--bg-light);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.parts-box.red-accent {
+    border-left: 5px solid var(--brand-red);
+}
+
+.parts-box.blue-accent {
+    border-left: 5px solid var(--brand-blue);
+}
+
+.parts-box h3 {
+    font-size: 1.25rem;
+    color: var(--brand-blue-dark);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.parts-box h3 i {
+    color: var(--brand-red);
+}
+
+.parts-list {
+    list-style: none;
+}
+
+.parts-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.parts-list li i {
+    color: var(--brand-blue);
+    font-size: 0.85rem;
+}
+
+.cta-banner {
+    margin-top: 40px;
+    background: linear-gradient(90deg, var(--brand-blue-dark) 0%, var(--brand-blue) 100%);
+    color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cta-text h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.cta-text p {
+    color: #dbeafe;
+}
+
+/* ==========================================================================
+   SECCIÓN CONTACTO Y UBICACIÓN
+   ========================================================================== */
+.contact {
+    background-color: #ffffff;
+}
+
+.contact-box {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 45px 30px;
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.contact-box h2 {
+    color: var(--brand-blue-dark);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.contact-box p {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.location-box {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.location-box i.fa-map-marker-alt {
+    font-size: 1.8rem;
+    color: var(--brand-red);
+    margin-top: 3px;
+}
+
+.location-box strong {
+    color: var(--brand-blue-dark);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.location-box p {
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.map-link {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--brand-blue);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: var(--transition);
+}
+
+.map-link:hover {
+    color: var(--brand-red);
+}
+
+.btn-whatsapp-lg {
+    background-color: var(--whatsapp-color);
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+}
+
+.btn-whatsapp-lg:hover {
+    background-color: #1eb956;
+    transform: scale(1.02);
+}
+
+.social-channels {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid var(--border-color);
+}
+
+.social-channels h3 {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.channel-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.channel-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    font-weight: 700;
+    color: var(--brand-blue-dark);
+    transition: var(--transition);
+}
+
+.channel-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.channel-card.insta:hover {
+    color: #e1306c;
+    border-color: #e1306c;
+}
+
+.channel-card.fb:hover {
+    color: #1877f2;
+    border-color: #1877f2;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer {
+    background-color: var(--brand-blue-dark);
+    color: #ffffff;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.footer p {
+    margin: 4px 0;
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero-mosaic-bg {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .social-bar-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .cta-banner {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .location-box {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .gallery-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
