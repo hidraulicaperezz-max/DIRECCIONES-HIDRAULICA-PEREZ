@@ -2,9 +2,9 @@
    RESET & PALETA DE COLORES (BLANCO, ROJO, AZUL)
    ========================================================================== */
 :root {
-    --brand-red: #c81d25;         
+    --brand-red: #c81d25;
     --brand-red-hover: #a01319;
-    --brand-blue: #0b559b;        
+    --brand-blue: #0b559b;
     --brand-blue-dark: #073867;
     --bg-dark: #071322;
     --bg-card: #0f1c2e;
@@ -381,7 +381,7 @@ section {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: 
+    background-image:
         linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
     background-size: 45px 45px;
@@ -556,7 +556,8 @@ section {
     min-height: 70vh;
 }
 
-:target.gallery-section {
+/* Mostrar la galería cuando se accede mediante un enlace */
+.gallery-section:target {
     display: block;
 }
 
@@ -984,4 +985,334 @@ img {
     max-height: 85vh;
     width: auto;
     height: auto;
+}
+
+/* ==========================================================================
+   AJUSTES EXCLUSIVOS PARA CELULARES
+   La versión de escritorio se mantiene sin cambios.
+   ========================================================================== */
+@media (max-width: 768px) {
+    .container {
+        width: 92%;
+    }
+
+    section {
+        padding: 55px 0;
+    }
+
+    .header-container {
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .logo-principal {
+        height: 58px;
+    }
+
+    .logo {
+        gap: 8px;
+    }
+
+    .brand-title {
+        font-size: 1.05rem;
+    }
+
+    .brand-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .navbar {
+        gap: 8px 14px;
+    }
+
+    .navbar a {
+        font-size: 0.82rem;
+    }
+
+    .btn-nav {
+        padding: 7px 12px;
+    }
+
+    .hero {
+        padding: 78px 0 68px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 14px;
+    }
+
+    .hero p {
+        font-size: 0.98rem;
+        line-height: 1.5;
+        margin-bottom: 22px;
+    }
+
+    .badge {
+        font-size: 0.72rem;
+        padding: 5px 11px;
+        margin-bottom: 15px;
+    }
+
+    .hero-buttons {
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 11px 17px;
+        font-size: 0.9rem;
+    }
+
+    .social-bar {
+        padding: 10px 0;
+    }
+
+    .social-bar-content {
+        font-size: 0.82rem;
+    }
+
+    .section-title {
+        margin-bottom: 28px;
+    }
+
+    .section-title h2 {
+        font-size: 1.65rem;
+        line-height: 1.25;
+    }
+
+    .section-title p {
+        font-size: 0.9rem;
+    }
+
+    .grid {
+        gap: 16px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card-icon {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .icono-cremallera,
+    .icono-cajas,
+    .icono-bombas,
+    .icono-cilindros,
+    .icono-cabinas,
+    .icono-elevadores,
+    .icono-tren {
+        height: 115px;
+        max-width: 100%;
+        width: auto;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+    .card h3 {
+        font-size: 1.08rem;
+        margin-bottom: 7px;
+    }
+
+    .card p {
+        font-size: 0.88rem;
+        margin-bottom: 10px;
+    }
+
+    .gallery-section {
+        padding: 45px 0;
+        min-height: auto;
+    }
+
+    .gallery-header {
+        margin-bottom: 24px;
+        padding-bottom: 14px;
+        gap: 10px;
+    }
+
+    .gallery-header h2 {
+        font-size: 1.4rem;
+        line-height: 1.25;
+    }
+
+    .masonry-gallery {
+        column-count: 2;
+        column-gap: 12px;
+    }
+
+    .photo-card {
+        margin-bottom: 12px;
+        border-width: 1px;
+        border-radius: 7px;
+        break-inside: avoid;
+    }
+
+    .zoom-badge {
+        display: none;
+    }
+
+    .lightbox {
+        padding: 14px;
+    }
+
+    .lightbox img {
+        max-width: 100%;
+        max-height: 76vh;
+        border-width: 1px;
+    }
+
+    .lightbox-close {
+        top: 12px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+        font-size: 19px;
+    }
+
+    .lightbox-nav {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    .lightbox-prev {
+        left: 8px;
+    }
+
+    .lightbox-next {
+        right: 8px;
+    }
+
+    .parts-box {
+        padding: 22px;
+    }
+
+    .parts-box h3 {
+        font-size: 1.1rem;
+        margin-bottom: 14px;
+    }
+
+    .parts-list li {
+        font-size: 0.9rem;
+        padding: 8px 0;
+    }
+
+    .cta-banner {
+        padding: 24px 18px;
+        margin-top: 26px;
+        gap: 14px;
+    }
+
+    .cta-text h3 {
+        font-size: 1.15rem;
+    }
+
+    .cta-text p {
+        font-size: 0.9rem;
+    }
+
+    .contact {
+        padding: 55px 0;
+    }
+
+    .contact-box {
+        padding: 30px 18px;
+    }
+
+    .contact-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .location-box {
+        padding: 16px;
+        gap: 8px;
+    }
+
+    .location-box p {
+        font-size: 0.88rem;
+        overflow-wrap: anywhere;
+    }
+
+    .btn-whatsapp-lg {
+        padding: 12px 18px;
+        font-size: 0.98rem;
+    }
+
+    .channel-grid {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .channel-card {
+        padding: 9px 14px;
+        font-size: 0.88rem;
+    }
+
+    .float-whatsapp {
+        width: 52px;
+        height: 52px;
+        right: 15px;
+        bottom: 15px;
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 550px) {
+    /* Dos fotos por fila para evitar que las galerías sean interminables. */
+    .masonry-gallery {
+        column-count: 2;
+        column-gap: 10px;
+    }
+
+    .photo-card {
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        padding: 65px 0 58px;
+    }
+
+    .hero h1 {
+        font-size: 1.55rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 290px;
+        margin: 0 auto;
+    }
+
+    .hero-buttons .btn {
+        justify-content: center;
+    }
+
+    .navbar {
+        gap: 8px 11px;
+    }
+
+    .navbar a {
+        font-size: 0.78rem;
+    }
+
+    .gallery-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .lightbox img {
+        max-height: 70vh;
+    }
+
+    .lightbox-nav {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
 }
