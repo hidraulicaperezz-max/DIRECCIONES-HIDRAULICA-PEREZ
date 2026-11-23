@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,13 +6,228 @@
     <meta name="google-site-verification" content="UO3YKBtRMp-ZXaiWxjbdeMTHsJEwtt_5Tx3TGLAsyM8" />
     <title>Hidráulica Pérez | Cremalleras, Cajas y Sistemas Hidráulicos en Sáenz Peña</title>
     <meta name="description" content="Hidráulica Pérez en Presidencia Roque Sáenz Peña, Chaco. Reparación de cremalleras eléctricas e hidráulicas, barras de dirección, cajas, bombas y cilindros hidráulicos, sistemas levanta cabina, elevadores y tren delantero. Venta de repuestos e insumos.">
+
     <link rel="stylesheet" href="style.css">
-    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="buscador.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
 
-    <!-- Datos estructurados de Hidráulica Pérez -->
+    <style>
+        /* PRODUCTOS FORD FOCUS */
+        .productos-focus {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            max-width: 1100px;
+            margin: 0 auto 25px;
+        }
+
+        .producto-focus {
+            background: #0f1c2e;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            min-width: 0;
+        }
+
+        .producto-focus-imagen {
+            position: relative;
+            display: block;
+            height: 150px;
+            background: #ffffff;
+            overflow: hidden;
+        }
+
+        .producto-focus-imagen img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .etiqueta-estado {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 5;
+            padding: 7px 10px;
+            border-radius: 5px;
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.3px;
+        }
+
+        .etiqueta-reacondicionada {
+            background: #c81d25;
+        }
+
+        .etiqueta-nueva {
+            background: #0b559b;
+        }
+
+        .etiqueta-modulo {
+            background: #073867;
+        }
+
+        .producto-focus-info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .producto-focus-info h3 {
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .producto-focus-info .aplicacion {
+            color: #94a3b8;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        .producto-focus-info .precio {
+            color: #ffffff;
+            font-size: 1.35rem;
+            font-weight: 800;
+            margin-bottom: 14px;
+        }
+
+        .producto-focus-whatsapp {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            padding: 10px;
+            border-radius: 7px;
+            background: #25d366;
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 0.82rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .producto-focus-whatsapp:hover {
+            background: #1da851;
+        }
+
+        /* ETIQUETAS EN LAS FOTOS AMPLIADAS */
+        .lightbox-producto {
+            position: relative;
+            display: inline-block;
+            max-width: 90%;
+            max-height: 85vh;
+        }
+
+        .lightbox-producto img {
+            display: block;
+            max-width: 100%;
+            max-height: 85vh;
+            object-fit: contain;
+        }
+
+        .lightbox-etiqueta {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 10;
+            padding: 9px 13px;
+            border-radius: 5px;
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 800;
+        }
+
+        /* GALERÍAS INDIVIDUALES DE PRODUCTOS */
+        .galeria-producto-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            margin-bottom: 25px;
+        }
+
+        .galeria-producto-grid .photo-card {
+            min-width: 0;
+        }
+
+        .galeria-producto-grid img {
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+            background: #ffffff;
+            display: block;
+        }
+
+        .galeria-producto-titulo {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 800px) {
+            .productos-focus {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .galeria-producto-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .productos-focus {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            .producto-focus-imagen {
+                height: 115px;
+            }
+
+            .producto-focus-info {
+                padding: 10px;
+            }
+
+            .producto-focus-info h3 {
+                font-size: 0.78rem;
+            }
+
+            .producto-focus-info .aplicacion {
+                font-size: 0.7rem;
+            }
+
+            .producto-focus-info .precio {
+                font-size: 1.05rem;
+            }
+
+            .producto-focus-whatsapp {
+                font-size: 0.72rem;
+                padding: 9px 5px;
+            }
+
+            .etiqueta-estado {
+                font-size: 0.58rem;
+                padding: 6px 7px;
+                top: 7px;
+                left: 7px;
+            }
+
+            .galeria-producto-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            .galeria-producto-grid img {
+                height: 150px;
+            }
+        }
+    </style>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -122,37 +336,29 @@
         </div>
     </header>
 
-    <!-- Hero Section con exactamente 7 columnas en fila (una al lado de la otra) -->
+    <!-- Hero -->
     <section id="inicio" class="hero">
         <div class="hero-stripes"></div>
 
-        <!-- 7 Imágenes en fila exacta (1 por cada servicio) -->
         <div class="hero-7-grid">
-            <!-- 1. Cremallera Hidráulica -->
             <div class="hero-7-item">
                 <img src="cremallera.png" alt="Cremallera Hidráulica">
             </div>
-            <!-- 2. Caja de Dirección -->
             <div class="hero-7-item">
                 <img src="caja de direccion.jpeg" alt="Caja de Dirección">
             </div>
-            <!-- 3. Bomba Hidráulica -->
             <div class="hero-7-item">
-                <img src="bomba hidraulica.jpeg" alt="Bomba Hidráulica">
+                <img src="bomba hidraulica....jpeg" alt="Bomba Hidráulica">
             </div>
-            <!-- 4. Cilindro Hidráulico -->
             <div class="hero-7-item">
                 <img src="cilindro.jpeg" alt="Cilindro Hidráulico">
             </div>
-            <!-- 5. Sistema Levanta Cabina -->
             <div class="hero-7-item">
                 <img src="levanta cabina.jpeg" alt="Sistema Levanta Cabina">
             </div>
-            <!-- 6. Elevador Hidráulico -->
             <div class="hero-7-item">
                 <img src="elevador.jpeg" alt="Elevador Hidráulico">
             </div>
-            <!-- 7. Tren Delantero -->
             <div class="hero-7-item">
                 <img src="tren delantero.jpeg" alt="Tren Delantero">
             </div>
@@ -163,7 +369,7 @@
         <div class="container hero-content">
             <span class="badge">Especialistas en Sistemas de Dirección e Hidráulica</span>
             <h1>Venta y Reparación de Sistemas Hidráulicos y Dirección en Sáenz Peña</h1>
-            <p>Diagnóstico computarizado, reparaciones de cremalleras electrónicas e hidráulicas, cajas de dirección, cilindros, bombas e insumos específicos.</p>
+            <p>Diagnóstico computarizado, reparaciones de cremalleras eléctricas e hidráulicas, cajas de dirección, cilindros, bombas e insumos específicos.</p>
             <div class="hero-buttons">
                 <a href="https://wa.me/5493644102180" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Consulta por WhatsApp</a>
                 <a href="#servicios" class="btn btn-secondary">Nuestros Servicios</a>
@@ -187,6 +393,36 @@
         </div>
     </section>
 
+    <!-- BUSCADOR DE PRODUCTOS Y SERVICIOS -->
+    <section id="buscador" class="search-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Buscar productos y servicios</h2>
+                <div class="line-blue"></div>
+                <p>Escribí lo que estás buscando y encontrá las fotos relacionadas.</p>
+            </div>
+
+            <form id="form-buscador" class="search-form" role="search">
+                <label for="busqueda-productos" class="sr-only">
+                    Buscar productos o servicios
+                </label>
+                <input
+                    type="search"
+                    id="busqueda-productos"
+                    name="q"
+                    placeholder="Ej.: cremallera hidráulica, bomba, cilindro..."
+                    autocomplete="off"
+                >
+                <button type="submit">
+                    <i class="fas fa-search"></i> Buscar
+                </button>
+            </form>
+
+            <p id="mensaje-buscador" class="search-message" aria-live="polite"></p>
+            <div id="resultados-buscador" class="search-results" aria-live="polite"></div>
+        </div>
+    </section>
+
     <!-- SECCIÓN DE SERVICIOS -->
     <section id="servicios" class="services">
         <div class="bg-stripe stripe-red"></div>
@@ -202,211 +438,730 @@
             </div>
 
             <div class="grid grid-3">
-                <!-- 1. Cremalleras -->
-                <a href="#galeria-cremalleras" class="card-link">
+
+                <!-- Cremalleras Hidráulicas -->
+                <a href="#galeria-cremalleras-hidraulicas" class="card-link">
                     <div class="card">
-                        <div class="card-icon"><img src="cremallera.webp" alt="Cremalleras" class="icono-cremallera"></div>
-                        <h3>Cremalleras Eléctricas e Hidráulicas</h3>
-                        <p>Diagnóstico electrónico, calibración y reparación integral de cremalleras eléctricas e hidráulicas y sus componentes, incluyendo barras de dirección.</p>
-                        <span class="ver-trabajos-link">Ver fotos de trabajos <i class="fas fa-arrow-right"></i></span>
+                        <div class="card-icon"><img src="cremallera.webp" alt="Cremalleras Hidráulicas" class="icono-cremallera"></div>
+                        <h3>Cremalleras Hidráulicas</h3>
+                        <p>Diagnóstico y reparación integral de cremalleras hidráulicas y sus componentes, incluyendo barras de dirección.</p>
+                        <span class="ver-trabajos-link">Ver trabajos <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
 
-                <!-- 2. Cajas de Dirección -->
+                <!-- Cremalleras Eléctricas -->
+                <a href="#galeria-cremalleras-electricas" class="card-link">
+                    <div class="card">
+                        <div class="card-icon"><img src="foto cremallera.jpg" alt="Cremalleras Eléctricas" class="icono-cremallera"></div>
+                        <h3>Cremalleras Eléctricas</h3>
+                        <p>Diagnóstico electrónico, calibración y reparación integral de cremalleras eléctricas y sus componentes.</p>
+                        <span class="ver-trabajos-link">Ver trabajos <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- Cajas de Dirección -->
                 <a href="#galeria-cajas" class="card-link">
                     <div class="card">
                         <div class="card-icon"><img src="CAJA DE DIRECCIÓN.webp" alt="Cajas de Dirección" class="icono-cajas"></div>
                         <h3>Cajas de Dirección</h3>
                         <p>Reparación y ajuste técnico especializado: auto/camioneta, maquinaria pesada como camiones, grúa, etc., y maquinaria agrícola como tractores, cosechadoras, etc.</p>
-                        <span class="ver-trabajos-link">Ver fotos de trabajos <i class="fas fa-arrow-right"></i></span>
+                        <span class="ver-trabajos-link">Ver trabajos <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
 
-                <!-- 3. Bombas Hidráulicas -->
+                <!-- Bombas Hidráulicas -->
                 <a href="#galeria-bombas" class="card-link">
                     <div class="card">
                         <div class="card-icon"><img src="bomba hidraulica.webp" alt="Bombas Hidráulicas" class="icono-bombas"></div>
                         <h3>Bombas Hidráulicas</h3>
                         <p>Mantenimiento, cambio de kits de estanqueidad, rectificación de pistas y pruebas de presión de trabajo en bombas hidráulicas.</p>
-                        <span class="ver-trabajos-link">Ver fotos de trabajos <i class="fas fa-arrow-right"></i></span>
+                        <span class="ver-trabajos-link">Ver trabajos <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
 
-                <!-- 4. Cilindros Hidráulicos -->
+                <!-- Cilindros Hidráulicos -->
                 <a href="#galeria-cilindros" class="card-link">
                     <div class="card">
                         <div class="card-icon"><img src="cilindros-hidraulicos.jpg" alt="Cilindros Hidráulicos" class="icono-cilindros"></div>
                         <h3>Cilindros Hidráulicos</h3>
                         <p>Reparación de cilindros hidráulicos de todas las pulgadas, recambio de sellos de alta presión, vástagos cromados, camisas de cilindro y bruñido.</p>
-                        <span class="ver-trabajos-link">Ver fotos de trabajos <i class="fas fa-arrow-right"></i></span>
+                       <span class="ver-trabajos-link">Ver trabajos <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
 
-                <!-- 5. Sistemas Levanta Cabinas -->
+                <!-- Sistemas Levanta Cabinas -->
                 <a href="#galeria-cabinas" class="card-link">
                     <div class="card">
                         <div class="card-icon"><img src="levanta cabina.jpg" alt="Levanta Cabinas" class="icono-cabinas"></div>
                         <h3>Sistemas Levanta Cabinas</h3>
                         <p>Reparación técnica de bombas hidráulicas accionadas, bombines manuales y cilindros de elevación para cabinas de camiones.</p>
-                        <span class="ver-trabajos-link">Ver fotos de trabajos <i class="fas fa-arrow-right"></i></span>
+                        <span class="ver-trabajos-link">Ver trabajos <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
 
-                <!-- 6. Elevadores Hidráulicos -->
+                <!-- Elevadores Hidráulicos -->
                 <a href="#galeria-elevadores" class="card-link">
                     <div class="card">
                         <div class="card-icon"><img src="elevador hidraulico.png" alt="Elevadores Hidráulicos" class="icono-elevadores"></div>
                         <h3>Elevadores Hidráulicos</h3>
                         <p>Servicio de reacondicionamiento técnico, reparación de sellos principales y mantenimiento de elevadores hidráulicos institucionales e industriales.</p>
-                        <span class="ver-trabajos-link">Ver fotos de trabajos <i class="fas fa-arrow-right"></i></span>
+                        <span class="ver-trabajos-link">Ver trabajos <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
 
-                <!-- 7. Tren Delantero -->
+                <!-- Tren Delantero -->
                 <a href="#galeria-tren" class="card-link">
                     <div class="card">
                         <div class="card-icon"><img src="tren-delantero.jpg" alt="Tren Delantero" class="icono-tren"></div>
                         <h3>Tren Delantero</h3>
                         <p>Reparación integral y alineación mecánica del sistema de dirección y suspensión: recambio de bujes, extremos de dirección, rótulas y parrilla.</p>
-                        <span class="ver-trabajos-link">Ver fotos de trabajos <i class="fas fa-arrow-right"></i></span>
+                        <span class="ver-trabajos-link">Ver trabajos <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
+
             </div>
         </div>
     </section>
 
     <!-- GALERÍAS -->
-    <!-- Galería 1: Cremalleras -->
-    <div id="galeria-cremalleras" class="gallery-section">
+
+    <!-- Galería de Cremalleras Hidráulicas -->
+    <div id="galeria-cremalleras-hidraulicas" class="gallery-section">
         <div class="container">
             <div class="gallery-header">
-                <h2>Cremalleras Eléctricas e Hidráulicas</h2>
+                <div>
+                    <h2>Cremalleras Hidráulicas</h2>
+                    <p></p>
+                </div>
                 <a href="#servicios" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Volver a Servicios</a>
             </div>
+
             <div class="masonry-gallery">
-                <a href="#zoom-crem-1" class="photo-card"><img src="669365451_122093270636693477_6112111703095838804_n.jpg" alt="1"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
-                <a href="#zoom-crem-2" class="photo-card"><img src="2026-02-26 (1).jpg" alt="2"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
-                <a href="#zoom-crem-3" class="photo-card"><img src="01ddaae9-d7c3-4290-b8a4-f64a7763b8e5.png" alt="3"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
-                <a href="#zoom-crem-4" class="photo-card"><img src="WhatsApp Image 2026-10-22 at 5.19.30 PM (2).jpeg" alt="4"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
-                <a href="#zoom-crem-5" class="photo-card"><img src="WhatsApp Image 2026-10-22 at 5.19.30 PM (1).jpeg" alt="5"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
+                <a href="#zoom-crem-hid-1" class="photo-card"><img src="foto cremallera...jpg" alt="Cremallera hidráulica 1"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
+                <a href="#zoom-crem-hid-2" class="photo-card"><img src="foto cremallera..jpg" alt="Cremallera hidráulica 2"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
             </div>
         </div>
     </div>
-    <div id="zoom-crem-1" class="lightbox"><a href="#galeria-cremalleras" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-crem-5" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="669365451_122093270636693477_6112111703095838804_n.jpg" alt="1"><a href="#zoom-crem-2" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
-    <div id="zoom-crem-2" class="lightbox"><a href="#galeria-cremalleras" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-crem-1" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="2026-02-26 (1).jpg" alt="2"><a href="#zoom-crem-3" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
-    <div id="zoom-crem-3" class="lightbox"><a href="#galeria-cremalleras" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-crem-2" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="01ddaae9-d7c3-4290-b8a4-f64a7763b8e5.png" alt="3"><a href="#zoom-crem-4" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
-    <div id="zoom-crem-4" class="lightbox"><a href="#galeria-cremalleras" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-crem-3" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="WhatsApp Image 2026-10-22 at 5.19.30 PM (2).jpeg" alt="4"><a href="#zoom-crem-5" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
-    <div id="zoom-crem-5" class="lightbox"><a href="#galeria-cremalleras" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-crem-4" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="WhatsApp Image 2026-10-22 at 5.19.30 PM (1).jpeg" alt="5"><a href="#zoom-crem-1" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
 
-    <!-- Galería 2: Cajas de Dirección -->
+    <!-- Ampliación de fotos de Cremalleras Hidráulicas -->
+    <div id="zoom-crem-hid-1" class="lightbox"><a href="#galeria-cremalleras-hidraulicas" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-crem-hid-2" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="foto cremallera...jpg" alt="Cremallera hidráulica 1"><a href="#zoom-crem-hid-2" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
+    <div id="zoom-crem-hid-2" class="lightbox"><a href="#galeria-cremalleras-hidraulicas" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-crem-hid-1" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="foto cremallera..jpg" alt="Cremallera hidráulica 2"><a href="#zoom-crem-hid-1" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
+
+    <!-- Galería de Cremalleras Eléctricas -->
+    <div id="galeria-cremalleras-electricas" class="gallery-section">
+        <div class="container">
+            <div class="gallery-header">
+                <div>
+                    <h2>Cremalleras Eléctricas</h2>
+                    <p></p>
+                </div>
+                <a href="#servicios" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Volver a Servicios</a>
+            </div>
+
+            <div class="productos-focus">
+
+                <!-- PRODUCTO 1: CREMALLERA REACONDICIONADA -->
+                <div class="producto-focus">
+                    <a href="#galeria-producto-reacondicionada" class="producto-focus-imagen">
+                        <img src="foto cremallera.png" alt="Cremallera de dirección eléctrica Ford Focus reacondicionada">
+                        <span class="etiqueta-estado etiqueta-reacondicionada">REACONDICIONADA · ORIGINAL</span>
+                        <span class="zoom-badge"><i class="fas fa-images"></i> Ver 3 fotos</span>
+                    </a>
+
+                    <div class="producto-focus-info">
+                        <h3>Cremallera de dirección eléctrica Ford Focus ||| 2013/- REACONDICIONADA ORIGINAL</h3>
+                        <p class="aplicacion">Aplicación: Ford Focus ||| 2013 en adelante</p>
+                        <p class="precio">$2.230.000</p>
+
+                        <a href="https://wa.me/5493644102180?text=Hola%2C%20quiero%20realizar%20una%20compra.%20Producto%3A%20Cremallera%20de%20direcci%C3%B3n%20el%C3%A9ctrica%20Ford%20Focus%20III%20reacondicionada%20original.%20Aplicaci%C3%B3n%3A%20Ford%20Focus%20III%202013%20en%20adelante.%20Precio%20publicado%3A%20%242.230.000.%20Quisiera%20consultar%20disponibilidad%20y%20coordinar%20la%20compra."
+                           target="_blank" rel="noopener noreferrer" class="producto-focus-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 2: CREMALLERA NUEVA -->
+                <div class="producto-focus">
+                    <a href="#galeria-producto-nueva" class="producto-focus-imagen">
+                        <img src="foto cremallera.jpg" alt="Cremallera de dirección eléctrica Ford Focus nueva">
+                        <span class="etiqueta-estado etiqueta-nueva">NUEVA</span>
+                        <span class="zoom-badge"><i class="fas fa-images"></i> Ver 3 fotos</span>
+                    </a>
+
+                    <div class="producto-focus-info">
+                        <h3>Cremallera de dirección eléctrica Ford Focus ||| 2013/2019 NUEVA</h3>
+                        <p class="aplicacion">Aplicación: Ford Focus ||| 2013/2019</p>
+                        <p class="precio">$2.446.000</p>
+
+                        <a href="https://wa.me/5493644102180?text=Hola%2C%20quiero%20realizar%20una%20compra.%20Producto%3A%20Cremallera%20de%20direcci%C3%B3n%20el%C3%A9ctrica%20Ford%20Focus%20III%20nueva.%20Aplicaci%C3%B3n%3A%20Ford%20Focus%20III%202013%2F2019.%20Precio%20publicado%3A%20%242.446.000.%20Quisiera%20consultar%20disponibilidad%20y%20coordinar%20la%20compra."
+                           target="_blank" rel="noopener noreferrer" class="producto-focus-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 3: MÓDULO ELECTRÓNICO -->
+                <div class="producto-focus">
+                    <a href="#galeria-producto-modulo" class="producto-focus-imagen">
+                        <img src="foto cremallera.....jpeg" alt="Módulo electrónico de dirección asistida Ford Focus III, PSCM">
+                        <span class="etiqueta-estado etiqueta-modulo">REACONDICIONADO · ORIGINAL</span>
+                        <span class="zoom-badge"><i class="fas fa-images"></i> Ver 6 fotos</span>
+                    </a>
+
+                    <div class="producto-focus-info">
+                        <h3>Módulo electrónico de dirección asistida (PSCM) REACONDICIONADO ORIGINAL</h3>
+                        <p class="aplicacion">Componente del sistema de dirección eléctrica Ford Focus III</p>
+                        <p class="precio">$1.200.000</p>
+
+                        <a href="https://wa.me/5493644102180?text=Hola%2C%20quiero%20realizar%20una%20compra.%20Producto%3A%20M%C3%B3dulo%20electr%C3%B3nico%20de%20direcci%C3%B3n%20asistida%20(PSCM).%20Aplicaci%C3%B3n%3A%20Ford%20Focus%20III.%20Precio%20publicado%3A%20%241.200.000.%20Quisiera%20consultar%20disponibilidad%20y%20coordinar%20la%20compra."
+                           target="_blank" rel="noopener noreferrer" class="producto-focus-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            Comprar por WhatsApp
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- GALERÍA INDIVIDUAL: CREMALLERA REACONDICIONADA -->
+    <div id="galeria-producto-reacondicionada" class="gallery-section">
+        <div class="container">
+            <div class="gallery-header">
+                <div>
+                    <h2>Cremallera Ford Focus reacondicionada original</h2>
+                    <p>Galería de imágenes del producto</p>
+                </div>
+                <a href="#galeria-cremalleras-electricas" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Volver a productos</a>
+            </div>
+
+            <h3 class="galeria-producto-titulo">REACONDICIONADA · ORIGINAL</h3>
+
+            <div class="galeria-producto-grid">
+                <a href="#zoom-reacondicionada-1" class="photo-card">
+                    <img src="foto cremallera.png" alt="Cremallera reacondicionada original Ford Focus, foto 1">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+
+                <a href="#zoom-reacondicionada-2" class="photo-card">
+                    <img src="crema electrica 2.jpg" alt="Cremallera reacondicionada original Ford Focus, foto 2">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+
+                <a href="#zoom-reacondicionada-3" class="photo-card">
+                    <img src="crema electrica 3.jpg" alt="Cremallera reacondicionada original Ford Focus, foto 3">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- GALERÍA INDIVIDUAL: CREMALLERA NUEVA -->
+    <div id="galeria-producto-nueva" class="gallery-section">
+        <div class="container">
+            <div class="gallery-header">
+                <div>
+                    <h2>Cremallera Ford Focus nueva</h2>
+                    <p>Galería de imágenes del producto</p>
+                </div>
+                <a href="#galeria-cremalleras-electricas" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Volver a productos</a>
+            </div>
+
+            <h3 class="galeria-producto-titulo">NUEVA</h3>
+
+            <div class="galeria-producto-grid">
+                <a href="#zoom-nueva-1" class="photo-card">
+                    <img src="foto cremallera.jpg" alt="Cremallera nueva Ford Focus, foto 1">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+
+                <a href="#zoom-nueva-2" class="photo-card">
+                    <img src="crema 2.jpg" alt="Cremallera nueva Ford Focus, foto 2">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+
+                <a href="#zoom-nueva-3" class="photo-card">
+                    <img src="crema 3.jpg" alt="Cremallera nueva Ford Focus, foto 3">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- GALERÍA INDIVIDUAL: MÓDULO ELECTRÓNICO -->
+    <div id="galeria-producto-modulo" class="gallery-section">
+        <div class="container">
+            <div class="gallery-header">
+                <div>
+                    <h2>Módulo electrónico de dirección asistida (PSCM)</h2>
+                    <p>Galería de imágenes del producto</p>
+                </div>
+                <a href="#galeria-cremalleras-electricas" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Volver a productos</a>
+            </div>
+
+            <h3 class="galeria-producto-titulo">REACONDICIONADO · ORIGINAL</h3>
+
+            <div class="galeria-producto-grid">
+                <a href="#zoom-modulo-1" class="photo-card">
+                    <img src="foto cremallera.....jpeg" alt="Módulo electrónico PSCM Ford Focus, foto 1">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+
+                <a href="#zoom-modulo-2" class="photo-card">
+                    <img src="modulo 2.jpg" alt="Módulo electrónico PSCM Ford Focus, foto 2">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+
+                <a href="#zoom-modulo-3" class="photo-card">
+                    <img src="modulo 3.jpg" alt="Módulo electrónico PSCM Ford Focus, foto 3">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+
+                <a href="#zoom-modulo-4" class="photo-card">
+                    <img src="modulo 4.jpg" alt="Módulo electrónico PSCM Ford Focus, foto 4">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+
+                <a href="#zoom-modulo-5" class="photo-card">
+                    <img src="modulo 5.jpg" alt="Módulo electrónico PSCM Ford Focus, foto 5">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+
+                <a href="#zoom-modulo-6" class="photo-card">
+                    <img src="modulo 6.jpg" alt="Módulo electrónico PSCM Ford Focus, foto 6">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- AMPLIACIÓN: CREMALLERA REACONDICIONADA -->
+    <div id="zoom-reacondicionada-1" class="lightbox">
+        <a href="#galeria-producto-reacondicionada" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-reacondicionada-3" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <div class="lightbox-producto">
+            <img src="foto cremallera.png" alt="Cremallera reacondicionada original Ford Focus, foto 1">
+            <span class="lightbox-etiqueta etiqueta-reacondicionada">REACONDICIONADA · ORIGINAL</span>
+        </div>
+        <a href="#zoom-reacondicionada-2" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-reacondicionada-2" class="lightbox">
+        <a href="#galeria-producto-reacondicionada" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-reacondicionada-1" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <div class="lightbox-producto">
+            <img src="crema electrica 2.jpg" alt="Cremallera reacondicionada original Ford Focus, foto 2">
+            <span class="lightbox-etiqueta etiqueta-reacondicionada">REACONDICIONADA · ORIGINAL</span>
+        </div>
+        <a href="#zoom-reacondicionada-3" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-reacondicionada-3" class="lightbox">
+        <a href="#galeria-producto-reacondicionada" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-reacondicionada-2" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <div class="lightbox-producto">
+            <img src="crema electrica 3.jpg" alt="Cremallera reacondicionada original Ford Focus, foto 3">
+            <span class="lightbox-etiqueta etiqueta-reacondicionada">REACONDICIONADA · ORIGINAL</span>
+        </div>
+        <a href="#zoom-reacondicionada-1" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <!-- AMPLIACIÓN: CREMALLERA NUEVA -->
+    <div id="zoom-nueva-1" class="lightbox">
+        <a href="#galeria-producto-nueva" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-nueva-3" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <div class="lightbox-producto">
+            <img src="foto cremallera.jpg" alt="Cremallera nueva Ford Focus, foto 1">
+            <span class="lightbox-etiqueta etiqueta-nueva">NUEVA</span>
+        </div>
+        <a href="#zoom-nueva-2" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-nueva-2" class="lightbox">
+        <a href="#galeria-producto-nueva" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-nueva-1" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <div class="lightbox-producto">
+            <img src="crema 2.jpg" alt="Cremallera nueva Ford Focus, foto 2">
+            <span class="lightbox-etiqueta etiqueta-nueva">NUEVA</span>
+        </div>
+        <a href="#zoom-nueva-3" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-nueva-3" class="lightbox">
+        <a href="#galeria-producto-nueva" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-nueva-2" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <div class="lightbox-producto">
+            <img src="crema 3.jpg" alt="Cremallera nueva Ford Focus, foto 3">
+            <span class="lightbox-etiqueta etiqueta-nueva">NUEVA</span>
+        </div>
+        <a href="#zoom-nueva-1" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <!-- AMPLIACIÓN: MÓDULO ELECTRÓNICO -->
+    <div id="zoom-modulo-1" class="lightbox">
+        <a href="#galeria-producto-modulo" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-modulo-6" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <div class="lightbox-producto">
+            <img src="foto cremallera.....jpeg" alt="Módulo electrónico PSCM Ford Focus, foto 1">
+            <span class="lightbox-etiqueta etiqueta-modulo">REACONDICIONADO · ORIGINAL</span>
+        </div>
+        <a href="#zoom-modulo-2" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-modulo-2" class="lightbox">
+        <a href="#galeria-producto-modulo" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-modulo-1" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <div class="lightbox-producto">
+            <img src="modulo 2.jpg" alt="Módulo electrónico PSCM Ford Focus, foto 2">
+            <span class="lightbox-etiqueta etiqueta-modulo">REACONDICIONADO · ORIGINAL</span>
+        </div>
+        <a href="#zoom-modulo-3" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-modulo-3" class="lightbox">
+        <a href="#galeria-producto-modulo" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-modulo-2" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <div class="lightbox-producto">
+            <img src="modulo 3.jpg" alt="Módulo electrónico PSCM Ford Focus, foto 3">
+            <span class="lightbox-etiqueta etiqueta-modulo">REACONDICIONADO · ORIGINAL</span>
+        </div>
+        <a href="#zoom-modulo-4" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-modulo-4" class="lightbox">
+        <a href="#galeria-producto-modulo" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-modulo-3" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <div class="lightbox-producto">
+            <img src="modulo 4.jpg" alt="Módulo electrónico PSCM Ford Focus, foto 4">
+            <span class="lightbox-etiqueta etiqueta-modulo">REACONDICIONADO · ORIGINAL</span>
+        </div>
+        <a href="#zoom-modulo-5" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-modulo-5" class="lightbox">
+        <a href="#galeria-producto-modulo" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-modulo-4" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <div class="lightbox-producto">
+            <img src="modulo 5.jpg" alt="Módulo electrónico PSCM Ford Focus, foto 5">
+            <span class="lightbox-etiqueta etiqueta-modulo">REACONDICIONADO · ORIGINAL</span>
+        </div>
+        <a href="#zoom-modulo-6" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-modulo-6" class="lightbox">
+        <a href="#galeria-producto-modulo" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-modulo-5" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <div class="lightbox-producto">
+            <img src="modulo 6.jpg" alt="Módulo electrónico PSCM Ford Focus, foto 6">
+            <span class="lightbox-etiqueta etiqueta-modulo">REACONDICIONADO · ORIGINAL</span>
+        </div>
+        <a href="#zoom-modulo-1" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <!-- FOTO ELÉCTRICA ADICIONAL QUE YA ESTABA EN LA WEB -->
+    <div id="zoom-crem-elec-4" class="lightbox">
+        <a href="#galeria-cremalleras-electricas" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <img src="foto cremallera....jpeg" alt="Cremallera eléctrica 4">
+    </div>
+
+    <!-- GALERÍA DE CAJAS DE DIRECCIÓN -->
     <div id="galeria-cajas" class="gallery-section">
         <div class="container">
             <div class="gallery-header">
-                <h2>Cajas de Dirección</h2>
+                <div>
+                    <h2>Cajas de Dirección</h2>
+                    <p></p>
+                </div>
                 <a href="#servicios" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Volver a Servicios</a>
             </div>
+
             <div class="masonry-gallery">
-                <a href="#zoom-cajas-1" class="photo-card"><img src="2026-05-26 (1).jpg" alt="1"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
-                <a href="#zoom-cajas-2" class="photo-card"><img src="caja.jpg" alt="2"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
-                <a href="#zoom-cajas-3" class="photo-card"><img src="669041430_122093270864693477_1249387262788129093_n.jpg" alt="3"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
+                <a href="#zoom-cajas-1" class="photo-card">
+                    <img src="caja  de dirección.jpg" alt="Caja de dirección 1">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+                <a href="#zoom-cajas-2" class="photo-card">
+                    <img src="caja.jpg" alt="Caja de dirección 2">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+                <a href="#zoom-cajas-3" class="photo-card">
+                    <img src="caja de dirección.jpg" alt="Caja de dirección 3">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
             </div>
         </div>
     </div>
-    <div id="zoom-cajas-1" class="lightbox"><a href="#galeria-cajas" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-cajas-3" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="2026-05-26 (1).jpg" alt=""><a href="#zoom-cajas-2" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
-    <div id="zoom-cajas-2" class="lightbox"><a href="#galeria-cajas" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-cajas-1" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="caja.jpg" alt=""><a href="#zoom-cajas-3" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
-    <div id="zoom-cajas-3" class="lightbox"><a href="#galeria-cajas" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-cajas-2" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="669041430_122093270864693477_1249387262788129093_n.jpg" alt=""><a href="#zoom-cajas-1" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
 
-    <!-- Galería 3: Bombas Hidráulicas -->
+    <div id="zoom-cajas-1" class="lightbox">
+        <a href="#galeria-cajas" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-cajas-3" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <img src="caja  de dirección.jpg" alt="Caja de dirección 1">
+        <a href="#zoom-cajas-2" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-cajas-2" class="lightbox">
+        <a href="#galeria-cajas" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-cajas-1" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <img src="caja.jpg" alt="Caja de dirección 2">
+        <a href="#zoom-cajas-3" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-cajas-3" class="lightbox">
+        <a href="#galeria-cajas" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-cajas-2" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <img src="caja de dirección.jpg" alt="Caja de dirección 3">
+        <a href="#zoom-cajas-1" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <!-- GALERÍA DE BOMBAS HIDRÁULICAS -->
     <div id="galeria-bombas" class="gallery-section">
         <div class="container">
             <div class="gallery-header">
-                <h2>Bombas Hidráulicas</h2>
+                <div>
+                    <h2>Bombas Hidráulicas</h2>
+                    <p></p>
+                </div>
                 <a href="#servicios" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Volver a Servicios</a>
             </div>
+
             <div class="masonry-gallery">
-                <a href="#zoom-bombas-1" class="photo-card"><img src="2026-07-10.jpg" alt="1"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
-                <a href="#zoom-bombas-2" class="photo-card"><img src="2026-07-10 (1).jpg" alt="2"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
-                <a href="#zoom-bombas-3" class="photo-card"><img src="2026-07-10 (2).jpg" alt="3"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
+                <a href="#zoom-bombas-1" class="photo-card">
+                    <img src="bomba hidraulica.jpg" alt="Bomba hidráulica 1">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+                <a href="#zoom-bombas-2" class="photo-card">
+                    <img src="bomba hidraulica..jpg" alt="Bomba hidráulica 2">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+                <a href="#zoom-bombas-3" class="photo-card">
+                    <img src="bomba hidraulica...jpg" alt="Bomba hidráulica 3">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
             </div>
         </div>
     </div>
-    <div id="zoom-bombas-1" class="lightbox"><a href="#galeria-bombas" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-bombas-3" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="2026-07-10.jpg" alt=""><a href="#zoom-bombas-2" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
-    <div id="zoom-bombas-2" class="lightbox"><a href="#galeria-bombas" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-bombas-1" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="2026-07-10 (1).jpg" alt=""><a href="#zoom-bombas-3" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
-    <div id="zoom-bombas-3" class="lightbox"><a href="#galeria-bombas" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-bombas-2" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="2026-07-10 (2).jpg" alt=""><a href="#zoom-bombas-1" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
 
-    <!-- Galería 4: Cilindros Hidráulicos -->
+    <div id="zoom-bombas-1" class="lightbox">
+        <a href="#galeria-bombas" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-bombas-3" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <img src="bomba hidraulica.jpg" alt="Bomba hidráulica 1">
+        <a href="#zoom-bombas-2" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-bombas-2" class="lightbox">
+        <a href="#galeria-bombas" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-bombas-1" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <img src="bomba hidraulica..jpg" alt="Bomba hidráulica 2">
+        <a href="#zoom-bombas-3" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-bombas-3" class="lightbox">
+        <a href="#galeria-bombas" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-bombas-2" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <img src="bomba hidraulica...jpg" alt="Bomba hidráulica 3">
+        <a href="#zoom-bombas-1" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <!-- GALERÍA DE CILINDROS HIDRÁULICOS -->
     <div id="galeria-cilindros" class="gallery-section">
         <div class="container">
             <div class="gallery-header">
-                <h2>Cilindros Hidráulicos</h2>
+                <div>
+                    <h2>Cilindros Hidráulicos</h2>
+                    <p></p>
+                </div>
                 <a href="#servicios" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Volver a Servicios</a>
             </div>
+
             <div class="masonry-gallery">
-                <a href="#zoom-cilindros-1" class="photo-card"><img src="2026-05-13.jpg" alt="1"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
-                <a href="#zoom-cilindros-2" class="photo-card"><img src="2026-08-13.jpg" alt="2"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
-                <a href="#zoom-cilindros-3" class="photo-card"><img src="cilindro.jpg" alt="3"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
+                <a href="#zoom-cilindros-1" class="photo-card">
+                    <img src="cilindro hidraulico.jpg" alt="Cilindro hidráulico 1">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+                <a href="#zoom-cilindros-2" class="photo-card">
+                    <img src="cilindro hidraulico..jpg" alt="Cilindro hidráulico 2">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+                <a href="#zoom-cilindros-3" class="photo-card">
+                    <img src="cilindro hidraulico...jpg" alt="Cilindro hidráulico 3">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
             </div>
         </div>
     </div>
-    <div id="zoom-cilindros-1" class="lightbox"><a href="#galeria-cilindros" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-cilindros-3" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="2026-05-13.jpg" alt=""><a href="#zoom-cilindros-2" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
-    <div id="zoom-cilindros-2" class="lightbox"><a href="#galeria-cilindros" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-cilindros-1" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="2026-08-13.jpg" alt=""><a href="#zoom-cilindros-3" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
-    <div id="zoom-cilindros-3" class="lightbox"><a href="#galeria-cilindros" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-cilindros-2" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="cilindro.jpg" alt=""><a href="#zoom-cilindros-1" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
 
-    <!-- Galería 5: Sistemas Levanta Cabinas -->
+    <div id="zoom-cilindros-1" class="lightbox">
+        <a href="#galeria-cilindros" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-cilindros-3" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <img src="cilindro hidraulico.jpg" alt="Cilindro hidráulico 1">
+        <a href="#zoom-cilindros-2" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-cilindros-2" class="lightbox">
+        <a href="#galeria-cilindros" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-cilindros-1" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <img src="cilindro hidraulico..jpg" alt="Cilindro hidráulico 2">
+        <a href="#zoom-cilindros-3" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-cilindros-3" class="lightbox">
+        <a href="#galeria-cilindros" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-cilindros-2" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <img src="cilindro hidraulico...jpg" alt="Cilindro hidráulico 3">
+        <a href="#zoom-cilindros-1" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <!-- GALERÍA DE SISTEMAS LEVANTA CABINAS -->
     <div id="galeria-cabinas" class="gallery-section">
         <div class="container">
             <div class="gallery-header">
-                <h2>Sistemas Levanta Cabinas</h2>
+                <div>
+                    <h2>Sistemas Levanta Cabinas</h2>
+                    <p></p>
+                </div>
                 <a href="#servicios" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Volver a Servicios</a>
             </div>
+
             <div class="masonry-gallery">
-                <a href="#zoom-cabinas-1" class="photo-card"><img src="705072404_122107872572693477_3432150678594569607_n.jpg" alt="1"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
-                <a href="#zoom-cabinas-2" class="photo-card"><img src="704752053_122107873004693477_7884365005666933163_n.jpg" alt="2"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
-                <a href="#zoom-cabinas-3" class="photo-card"><img src="703924099_122107873034693477_5042430895245152405_n.jpg" alt="3"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
+                <a href="#zoom-cabinas-1" class="photo-card">
+                    <img src="levanta cabina..jpg" alt="Sistema levanta cabina 1">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+                <a href="#zoom-cabinas-2" class="photo-card">
+                    <img src="levanta cabina...jpg" alt="Sistema levanta cabina 2">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+                <a href="#zoom-cabinas-3" class="photo-card">
+                    <img src="levanta cabina....jpg" alt="Sistema levanta cabina 3">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
             </div>
         </div>
     </div>
-    <div id="zoom-cabinas-1" class="lightbox"><a href="#galeria-cabinas" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-cabinas-3" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="705072404_122107872572693477_3432150678594569607_n.jpg" alt=""><a href="#zoom-cabinas-2" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
-    <div id="zoom-cabinas-2" class="lightbox"><a href="#galeria-cabinas" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-cabinas-1" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="704752053_122107873004693477_7884365005666933163_n.jpg" alt=""><a href="#zoom-cabinas-3" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
-    <div id="zoom-cabinas-3" class="lightbox"><a href="#galeria-cabinas" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-cabinas-2" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="703924099_122107873034693477_5042430895245152405_n.jpg" alt=""><a href="#zoom-cabinas-1" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
 
-    <!-- Galería 6: Elevadores Hidráulicos -->
+    <div id="zoom-cabinas-1" class="lightbox">
+        <a href="#galeria-cabinas" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-cabinas-3" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <img src="levanta cabina..jpg" alt="Sistema levanta cabina 1">
+        <a href="#zoom-cabinas-2" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-cabinas-2" class="lightbox">
+        <a href="#galeria-cabinas" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-cabinas-1" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <img src="levanta cabina...jpg" alt="Sistema levanta cabina 2">
+        <a href="#zoom-cabinas-3" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-cabinas-3" class="lightbox">
+        <a href="#galeria-cabinas" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-cabinas-2" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <img src="levanta cabina....jpg" alt="Sistema levanta cabina 3">
+        <a href="#zoom-cabinas-1" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <!-- GALERÍA DE ELEVADORES HIDRÁULICOS -->
     <div id="galeria-elevadores" class="gallery-section">
         <div class="container">
             <div class="gallery-header">
-                <h2>Elevadores Hidráulicos</h2>
+                <div>
+                    <h2>Elevadores Hidráulicos</h2>
+                    <p></p>
+                </div>
                 <a href="#servicios" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Volver a Servicios</a>
             </div>
+
             <div class="masonry-gallery">
-                <a href="#zoom-elev-1" class="photo-card"><img src="elevador hidrauico.jpg" alt="1"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
-                <a href="#zoom-elev-2" class="photo-card"><img src="elevador hidraulico 2.jpg" alt="2"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
-                <a href="#zoom-elev-3" class="photo-card"><img src="elevador hidraulico 3.jpg" alt="3"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
+                <a href="#zoom-elevadores-1" class="photo-card">
+                    <img src="elevador hidrauico.jpg" alt="Elevador hidráulico 1">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+                <a href="#zoom-elevadores-2" class="photo-card">
+                    <img src="elevador hidraulico 2.jpg" alt="Elevador hidráulico 2">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+                <a href="#zoom-elevadores-3" class="photo-card">
+                    <img src="elevador hidraulico 3.jpg" alt="Elevador hidráulico 3">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
             </div>
         </div>
     </div>
-    <div id="zoom-elev-1" class="lightbox"><a href="#galeria-elevadores" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-elev-3" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="elevador hidrauico.jpg" alt=""><a href="#zoom-elev-2" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
-    <div id="zoom-elev-2" class="lightbox"><a href="#galeria-elevadores" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-elev-1" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="elevador hidraulico 2.jpg" alt=""><a href="#zoom-elev-3" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
-    <div id="zoom-elev-3" class="lightbox"><a href="#galeria-elevadores" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-elev-2" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="elevador hidraulico 3.jpg" alt=""><a href="#zoom-elev-1" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
 
-    <!-- Galería 7: Tren Delantero -->
+    <div id="zoom-elevadores-1" class="lightbox">
+        <a href="#galeria-elevadores" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-elevadores-3" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <img src="elevador hidrauico.jpg" alt="Elevador hidráulico 1">
+        <a href="#zoom-elevadores-2" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-elevadores-2" class="lightbox">
+        <a href="#galeria-elevadores" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-elevadores-1" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <img src="elevador hidraulico 2.jpg" alt="Elevador hidráulico 2">
+        <a href="#zoom-elevadores-3" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-elevadores-3" class="lightbox">
+        <a href="#galeria-elevadores" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-elevadores-2" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <img src="elevador hidraulico 3.jpg" alt="Elevador hidráulico 3">
+        <a href="#zoom-elevadores-1" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <!-- GALERÍA DE TREN DELANTERO -->
     <div id="galeria-tren" class="gallery-section">
         <div class="container">
             <div class="gallery-header">
-                <h2>Tren Delantero</h2>
+                <div>
+                    <h2>Tren Delantero</h2>
+                    <p></p>
+                </div>
                 <a href="#servicios" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Volver a Servicios</a>
             </div>
+
             <div class="masonry-gallery">
-                <a href="#zoom-tren-1" class="photo-card"><img src="tren delantero.jpg" alt="1"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
-                <a href="#zoom-tren-2" class="photo-card"><img src="tren delantero 3.jpg" alt="2"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
-                <a href="#zoom-tren-3" class="photo-card"><img src="tren delantero 2.webp" alt="3"><span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span></a>
+                <a href="#zoom-tren-1" class="photo-card">
+                    <img src="tren delantero.jpg" alt="Tren delantero 1">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+                <a href="#zoom-tren-2" class="photo-card">
+                    <img src="tren delantero 3.jpg" alt="Tren delantero 2">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
+                <a href="#zoom-tren-3" class="photo-card">
+                    <img src="tren delantero 2.webp" alt="Tren delantero 3">
+                    <span class="zoom-badge"><i class="fas fa-search-plus"></i> Ampliar</span>
+                </a>
             </div>
         </div>
     </div>
-    <div id="zoom-tren-1" class="lightbox"><a href="#galeria-tren" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-tren-3" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="tren delantero.jpg" alt=""><a href="#zoom-tren-2" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
-    <div id="zoom-tren-2" class="lightbox"><a href="#galeria-tren" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-tren-1" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="tren delantero 3.jpg" alt=""><a href="#zoom-tren-3" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
-    <div id="zoom-tren-3" class="lightbox"><a href="#galeria-tren" class="lightbox-close"><i class="fas fa-times"></i></a><a href="#zoom-tren-2" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a><img src="tren delantero 2.webp" alt=""><a href="#zoom-tren-1" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a></div>
 
-    <!-- Sección Venta de Repuestos -->
+    <div id="zoom-tren-1" class="lightbox">
+        <a href="#galeria-tren" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-tren-3" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <img src="tren delantero.jpg" alt="Tren delantero 1">
+        <a href="#zoom-tren-2" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-tren-2" class="lightbox">
+        <a href="#galeria-tren" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-tren-1" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <img src="tren delantero 3.jpg" alt="Tren delantero 2">
+        <a href="#zoom-tren-3" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+    <div id="zoom-tren-3" class="lightbox">
+        <a href="#galeria-tren" class="lightbox-close"><i class="fas fa-times"></i></a>
+        <a href="#zoom-tren-2" class="lightbox-nav lightbox-prev"><i class="fas fa-chevron-left"></i></a>
+        <img src="tren delantero 2.webp" alt="Tren delantero 3">
+        <a href="#zoom-tren-1" class="lightbox-nav lightbox-next"><i class="fas fa-chevron-right"></i></a>
+    </div>
+
+       <!-- Sección Venta de Repuestos -->
     <section id="repuestos" class="parts-section">
         <div class="container">
             <div class="section-title">
@@ -492,5 +1247,6 @@
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
