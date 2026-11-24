@@ -1316,3 +1316,23 @@ img {
         font-size: 14px;
     }
 }
+/* ==========================================================================
+   TAMAÑO EXCLUSIVO: CILINDROS TELESCÓPICOS PARA BATEAS
+   ========================================================================== */
+
+/* Computadora */
+.card-link[href="#galeria-cilindros-telescopicos"] .card-icon img {
+    height: 200px;
+    width: auto;
+}
+
+/* Celular */
+@media (max-width: 768px) {
+    .card-link[href="#galeria-cilindros-telescopicos"] .card-icon img {
+        height: 140px;
+        max-width: 100%;
+        width: auto;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+}
