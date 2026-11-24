@@ -38,8 +38,44 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         },
         {
+            id: "galeria-cajas-camiones",
+            nombres: [
+                "cajas hidraulicas de camiones",
+                "caja hidraulica de camion",
+                "cajas hidraulicas camion",
+                "caja hidraulica camion",
+                "cajas de camion",
+                "caja de camion",
+                "direccion de camion",
+                "direccion hidraulica de camion"
+            ]
+        },
+        {
+            id: "galeria-cajas-valvulas",
+            nombres: [
+                "cajas de valvulas hidraulicas",
+                "caja de valvula hidraulica",
+                "cajas de valvula hidraulica",
+                "cajas de valvulas",
+                "caja de valvulas",
+                "caja de valvula",
+                "valvulas hidraulicas"
+            ]
+        },
+        {
+            id: "galeria-tomas-fuerza",
+            nombres: [
+                "tomas de fuerza hidraulicas",
+                "toma de fuerza hidraulica",
+                "tomas de fuerza",
+                "toma de fuerza"
+            ]
+        },
+        {
             id: "galeria-cajas",
             nombres: [
+                "cajas hidraulicas vehiculares",
+                "caja hidraulica vehicular",
                 "cajas de direccion",
                 "caja de direccion",
                 "cajas direccion",
@@ -57,6 +93,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 "bomba"
             ]
         },
+
+        // CILINDROS HIDRÁULICOS TELESCÓPICOS PARA BATEAS
+        {
+            id: "galeria-cilindros-telescopicos",
+            nombres: [
+                "cilindros hidraulicos telescopicos para bateas",
+                "cilindro hidraulico telescopico de batea",
+                "cilindro hidraulico telescopico para batea",
+                "cilindros hidraulicos telescopicos",
+                "cilindro hidraulico telescopico",
+                "cilindros telescopicos",
+                "cilindro telescopico",
+                "cilindros de batea",
+                "cilindro de batea",
+                "telescopico de batea",
+                "telescopicos de batea",
+                "batea"
+            ]
+        },
+
         {
             id: "galeria-cilindros",
             nombres: [
