@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", () => {
 
     const formulario = document.getElementById("form-buscador");
@@ -82,6 +81,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 "caja direccion"
             ]
         },
+
+        // BOMBAS VARIABLES HIDRÁULICAS
+        {
+            id: "galeria-bombas-variables",
+            nombres: [
+                "bombas variables hidraulicas",
+                "bomba variable hidraulica",
+                "bombas variables",
+                "bomba variable",
+                "bombas de caudal variable",
+                "bomba de caudal variable"
+            ]
+        },
+
         {
             id: "galeria-bombas",
             nombres: [
